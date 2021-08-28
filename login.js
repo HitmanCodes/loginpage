@@ -6,3 +6,7 @@ togglePassword.addEventListener('click', function (e) {
     password.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
+
+document.addEventListener('touchmove', function (event) {
+  if (event.scale !== 1) { event.preventDefault(); }
+}, { passive: false });
